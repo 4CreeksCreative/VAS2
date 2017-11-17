@@ -1,0 +1,59 @@
+extends(src='layout.sgr')
+	block(name="content")
+		.content
+			section#hero.img-clip.imagebg.parallax.cover.height-70(data-overlay="7")
+				.background-image-holder
+					//img(alt='background', src='{{contentful.UpdatesPage[0].headerBackground.file.url}}')
+				.signature-container
+				.container.pos-vertical-center
+					.row
+						.col-sm-12
+							//h2#updatetitle {{contentful.Home[0].updatesSectionTitle}}
+
+				section
+					.container
+						p {{JSON.stringify(contentful.Home)}}
+			// if(condition="{{contentful.Updates.length > 0}}")
+			// 	section.updates-section.masonry
+			// 		.container
+			// 			.row
+			// 				.col-sm-12.text-center
+			// 					h3.color--green {{contentful.Home[0].updatesSectionTitle}}
+			// 			if(condition="{{contentful.BlogCategories.length > 0}}")
+			// 				.row.masonry-filter-container.text-center
+			// 					.masonry-filter-holder.text-center
+			// 						.masonry__filters.text-center(data-filter-all-text='{{contentful.UpdatesPage[0].allCategories}}')
+			// 							ul
+			// 								li.active(data-masonry-filter='*') {{contentful.UpdatesPage[0].allCategories}}
+			// 								each(loop="item, key in contentful.BlogCategories")
+			// 									li.active(data-masonry-filter='{{item.slug}}') {{item.title}}
+			// 			.row.masonry__container
+			// 				- var i = 0; var e = contentful.Updates.length; while (i<e){
+			// 				- var date = new Date(contentful.Updates[i].date);
+			// 					- var cats = ''
+			// 					if contentful.Updates[i].category.length > 0
+			// 						for item in contentful.Updates[i].category
+			// 							- cats+= ' filter-'+item.fields.slug
+			// 					.col-xs-12.update-item.bg--white.clearfix.masonry__item(class='#{cats}')
+			// 						a(href="#{contentful.Updates[i]._url}")
+			// 							p.color--green.small.unmarg.float-left.col-xs-12= contentful.Updates[i].location + ' ' + (date.getMonth()+1) +' '+ date.getDate() +' '+ date.getFullYear()
+			// 							h6.weight-700.color--blue.unmarg.float-left.col-xs-10= contentful.Updates[i].title
+			// 							div.arrow-right.float-right
+			// 				- i++}
+            // 
+			// if contentful.TOTM.length > 0
+			// 	section.updates-section
+			// 		.container
+			// 			.row
+			// 				.col-sm-12.text-center
+			// 					h3.color--green= contentful.Home[0].tipOfTheMonth
+            // 
+			// 				- var i = 0; var e = contentful.TOTM.length; while (i<e){
+			// 				- var date = new Date(contentful.TOTM[i].date);
+            // 
+			// 					.col-xs-12.update-item.bg--white.clearfix
+			// 						a(href="#{contentful.TOTM[i]._url}")
+			// 							p.color--green.small.unmarg.float-left.col-xs-12 Update #{(date.getMonth()+1) +' '+ date.getDate() +' '+ date.getFullYear()}
+			// 							h6.weight-700.color--blue.unmarg.float-left.col-xs-10= contentful.TOTM[i].title
+			// 							div.arrow-right.float-right
+			// 				- i++}

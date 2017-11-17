@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+"
+  codebase="http://help.vas.com:80/"
+  href="http://help.vas.com:80/Update.jnlp"
+>
+  <information>
+    <title>DairyComp &amp; Pocket CowCard Software Updates</title>
+    <vendor>Valley Agricultural Software</vendor>
+    <homepage href="http://www.vas.com"/>
+    <description>Update DairyComp and Pocket CowCard via the Internet</description>
+    <icon href="webupdater.png" kind="default"/>
+    <icon href="vas-logo-sp.png" kind="splash"/>
+  </information>
+  <update check="always" policy="always" />
+  <security> 
+    <all-permissions/> 
+  </security> 
+  <resources>
+    <j2se version="1.7+" />
+    <jar href="webupdater.jar" main="true" /> 
+  </resources>
+  <application-desc main-class="com.vas.wu.WebUpdater" />
+</jnlp>

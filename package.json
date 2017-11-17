@@ -1,0 +1,46 @@
+{
+  "name": "4-creeks",
+  "description": "4-creeks site",
+  "version": "0.0.1",
+  "author": "deepfry",
+  "ava": {
+    "verbose": "true"
+  },
+  "bugs": "https://github.com/deepfry/4-creeks/issues",
+  "dependencies": {
+    "is-buffer": "^1.1.6",
+    "postcss-each": "^0.10.0",
+    "postcss-nested": "^2.1.2",
+    "postcss-scss": "^1.0.2",
+    "postcss-simple-vars": "^4.1.0",
+    "reshape-standard": "^3.0.0",
+    "slugify": "^1.2.4",
+    "spike": "^2.0.0",
+    "spike-contentful": "^2.0.1",
+    "spike-css-standards": "^3.0.0",
+    "spike-js-standards": "^2.0.2",
+    "spike-optimize": "^0.1.2",
+    "spike-page-id": "^1.0.0",
+    "sugarml": "^0.6.0",
+    "sugarss": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "rimraf": "^2.6.1",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2"
+  },
+  "homepage": "https://github.com/deepfry/4-creeks",
+  "main": "app.js",
+  "private": true,
+  "repository": "https://github.com/deepfry/4-creeks",
+  "scripts": {
+    "lint": "standard | snazzy",
+    "precommit": "npm run lint -s",
+    "pretest": "npm run lint -s",
+    "test": "NODE_ENV=test ava",
+    "start": "spike watch",
+    "build": "spike compile",
+    "prod": "NODE_ENV=production spike compile -e production"
+  }
+}

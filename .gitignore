@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+public
+assets/img/RESIZED
+assets/img/stack
+*.psd
+*.ai
+contentful_export.json
